@@ -1,2 +1,2 @@
-# Technologies
-**React**, **Merely-UI**, **Z-State**
+# Технологии:
+## NextJS, Merely-ui, Z-State
