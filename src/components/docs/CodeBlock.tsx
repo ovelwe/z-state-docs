@@ -1,8 +1,9 @@
 'use client';
 
 import { Button, Text } from '@merely-ui/react';
-import {useSiteLocale} from "@/store/siteStore";
-import {CodeBlockProps} from "@/types/docs";
+import { useSiteLocale } from "@/store/siteStore";
+import { CodeBlockProps } from "@/types/docs";
+import { CodeBlock as ZMdCodeBlock } from '@ovelwe/z-md';
 
 export function CodeBlock({ code }: CodeBlockProps) {
 
@@ -25,10 +26,7 @@ export function CodeBlock({ code }: CodeBlockProps) {
                     </Button>
                 </div>
             </div>
-
-            <pre>
-        <code>{code}</code>
-      </pre>
+            <ZMdCodeBlock code={code} language="ts" />
         </div>
     );
 }

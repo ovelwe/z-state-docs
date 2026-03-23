@@ -826,6 +826,20 @@ select,
     }
 }
 
+/* z-md */
+
+.code-block code.zmd-code-block {
+    color: var(--zmd-tok-plain) !important;
+}
+
+.code-block .zmd-pre {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
 /* Responsive */
 
 @media (max-width: 1100px) {

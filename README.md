@@ -1,2 +1,2 @@
 # Технологии:
-## NextJS, Merely-ui, Z-State
+## NextJS, Merely-ui, z-state, z-md

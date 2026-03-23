@@ -12,6 +12,7 @@ import {
 } from '@merely-ui/react';
 import { getDictionary } from '@/content/i18n';
 import { useSiteLocale, useSiteTheme } from '@/store/siteStore';
+import { CodeBlock } from '@ovelwe/z-md';
 
 export default function HomePage() {
     const locale = useSiteLocale();
@@ -24,9 +25,10 @@ export default function HomePage() {
                 <section className="hero">
                     <Flex gap="10px" flexWrap="wrap">
                         <Tag>@ovelwe/z-state</Tag>
+                        <Tag variant="outline">@ovelwe/z-md</Tag>
+                        <Tag variant="outline">Merely UI</Tag>
                         <Tag variant="outline">React 16.8 - 19.0</Tag>
                         <Tag variant="outline">TypeScript</Tag>
-                        <Tag variant="outline">Merely UI</Tag>
                     </Flex>
 
                     <Title as="h1" _size="3xl" className="hero__title">
@@ -105,13 +107,10 @@ export default function HomePage() {
                     </Text>
 
                     <div className="code-block">
-    <pre>
-      <code>{`Supported versions:
-- React 16.8+
-- React 17
-- React 18
-- React 19`}</code>
-    </pre>
+                        <CodeBlock
+                            code={`Supported versions:\n- React 16.8+\n- React 17\n- React 18\n- React 19`}
+                            language="text"
+                        />
                     </div>
                 </section>
 
@@ -121,9 +120,10 @@ export default function HomePage() {
                     </Title>
 
                     <div className="code-block">
-            <pre>
-              <code>npm install @ovelwe/z-state</code>
-            </pre>
+                        <CodeBlock
+                            code="npm install @ovelwe/z-state"
+                            language="bash"
+                        />
                     </div>
                 </section>
 
@@ -133,21 +133,13 @@ export default function HomePage() {
                     </Title>
 
                     <div className="code-block">
-            <pre>
-              <code>{`import { createStore } from '@ovelwe/z-state';
-const store = createStore({
-  count: 0,
-  text: 'hello',
-});
-
-store.setState((prev) => ({
-  count: prev.count + 1,
-}));`}
-              </code>
-            </pre>
+                        <CodeBlock
+                            code={`import { createStore } from '@ovelwe/z-state';\n\nconst store = createStore({\n  count: 0,\n  text: 'hello',\n});\n\nstore.setState((prev) => ({\n  count: prev.count + 1,\n}));`}
+                            language="ts"
+                        />
                     </div>
                 </section>
             </div>
         </div>
-);
+    );
 }
