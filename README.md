@@ -1,2 +1,2 @@
-# z-state-docs
-Documentation for my library "z-state"
+# Technologies
+**React**, **Merely-UI**, **Z-State**
